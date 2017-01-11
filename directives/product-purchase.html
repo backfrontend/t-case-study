@@ -1,0 +1,9 @@
+		<div class="row bottom-pad">
+			<div class="col-xs-6 col-lg-6 text-center" ng-show="productPurchase.checkProduct('store',product.info.CatalogEntryView[0].purchasingChannelCode)">
+				<button class="btn btn-default btn-black btn-responsive">PICK UP IN STORE</button>
+				<strong class="small-hide">find in a store</strong>
+			</div>
+			<div class="col-xs-6 col-lg-6" ng-show="productPurchase.checkProduct('cart', product.info.CatalogEntryView[0].purchasingChannelCode)">
+				<button class="btn btn-default btn-red btn-responsive">ADD TO CART</button>
+			</div>
+		</div>

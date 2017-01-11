@@ -1,0 +1,37 @@
+	<div class="row">
+		<div class="col-xs-6 text-left">
+		<span class="glyphicon glyphicon-star red glyphicon-medium" ng-repeat="i in review.getRange(product.info.CatalogEntryView[0].CustomerReview[0].consolidatedOverallRating) track by $index"></span> overall
+		</div>
+		<div class="col-xs-6 text-right">
+		<a href="#">view all {{product.info.CatalogEntryView[0].CustomerReview[0].totalReviews}} reviews</a>
+		</div>
+	</div>
+	
+	<div class="row review-container">
+		<div class="row">
+			<div class="col-xs-6">
+			<strong>PRO</strong>
+			<p>most helpful 4-5 star review</p>
+			</div>
+			<div class="col-xs-6">
+			<strong>CON</strong>
+			<p>most helpful 1-2 star review</p>
+			</div>
+		</div>
+			<hr>
+		<div class="row">	
+			<div class="col-xs-6">
+			<p><span class="glyphicon glyphicon-star red glyphicon-medium" ng-repeat="i in review.getRange(product.info.CatalogEntryView[0].CustomerReview[0].Pro[0].overallRating) track by $index"><span></p>
+			<strong>{{product.info.CatalogEntryView[0].CustomerReview[0].Pro[0].title}}</strong>
+			<p>{{product.info.CatalogEntryView[0].CustomerReview[0].Pro[0].review}}</p>
+			<a href="#">{{product.info.CatalogEntryView[0].CustomerReview[0].Pro[0].screenName}}</a> : {{product.info.CatalogEntryView[0].CustomerReview[0].Pro[0].datePosted | dateFilter}}
+			</div>
+			
+			<div class="col-xs-6">
+			<p><span class="glyphicon glyphicon-star red glyphicon-medium" ng-repeat="i in review.getRange(product.info.CatalogEntryView[0].CustomerReview[0].Con[0].overallRating) track by $index"></span></p>
+			<strong>{{product.info.CatalogEntryView[0].CustomerReview[0].Con[0].title}}</strong>
+			<p>{{product.info.CatalogEntryView[0].CustomerReview[0].Con[0].review}}</p>
+			<a href="#">{{product.info.CatalogEntryView[0].CustomerReview[0].Con[0].screenName}}</a> : {{product.info.CatalogEntryView[0].CustomerReview[0].Con[0].datePosted | dateFilter}}
+			</div>
+		</div>
+	</div>

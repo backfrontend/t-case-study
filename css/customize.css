@@ -1,0 +1,73 @@
+/*!
+ * 
+ * 
+ * 
+ */
+.red {
+color:#cc0000;
+}
+
+.vert-left {
+border-left:1px solid #ccc;
+}
+
+.review-container {
+background-color:#f6f5f5;
+padding:10px;
+}
+
+.btn-red {
+background-color:#cc0000;
+color:#FFF;
+}
+
+.btn-black {
+background-color:#000;
+color:#FFF;
+}
+
+.btn-grey {
+background-color:#f3f3f3;
+color:#000;
+}
+
+.btn {
+width:100%;
+}
+
+.glyphicon-medium {
+font-size: 25px;
+}
+
+.bottom-pad {
+margin-bottom:20px;
+}
+
+.min-pad {
+padding:4px;
+}
+
+@media (max-width: 768px) {
+  .btn-responsive {
+    padding:8px 4px;
+    font-size:80%;
+    line-height: 1;
+    border-radius:3px;
+  }
+  .small-hide {
+  display:none;
+  }
+  .small {
+      font-size:70%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .btn-responsive {
+    padding:8px;
+    font-size:90%;
+    line-height: 1.2;
+  }
+}
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="targetStore">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Target Case Study</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/customize.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="container" ng-controller="ProductController as product">
+<div class="row">
+	<div class="col-md-6 text-center">
+		<h2>{{product.info.CatalogEntryView[0].title}}</h2>
+		<product-image-viewer></product-image-viewer>
+	</div>
+	<!-- End Left -->
+	<div class="col-md-6">
+		<h3>{{product.info.CatalogEntryView[0].Offers[0].OfferPrice[0].formattedPriceValue}} <small>{{product.info.CatalogEntryView[0].Offers[0].OfferPrice[0].priceQualifier | lowercase}}</small></h3>
+		<hr>
+		<div class="red">
+			<span class="glyphicon glyphicon-tag" aria-hidden="true"></span> {{product.info.CatalogEntryView[0].Promotions[0].Description[0].shortDescription | lowercase}}
+		</div>
+		<div class="red">
+			<span class="glyphicon glyphicon-tag" aria-hidden="true"></span> {{product.info.CatalogEntryView[0].Promotions[1].Description[0].shortDescription | lowercase}}
+		</div>
+		<hr>
+		<product-purchase></product-purchase>
+		<div class="row bottom-pad">
+			<div class="col-xs-2 col-sm-2">
+			<span class="lead">returns</span>
+			</div>
+			<div class="col-xs-10 col-sm-10 vert-left">
+			<p class="small">This item must be returned within 30 days of the ship date. See return policy for details. Prices, promotions, styles and availability may vary by store.</p>
+			</div>
+		</div>
+		<div class="row bottom-pad">
+			<div class="col-xs-4 col-lg-4 min-pad">
+				<button class="btn btn-default btn-grey btn-responsive">ADD TO REGISTRY</button>
+			</div>
+			<div class="col-xs-4 col-lg-4 min-pad">
+				<button class="btn btn-default btn-grey btn-responsive">ADD TO LIST</button>
+			</div>
+			<div class="col-xs-4 col-lg-4 min-pad">
+				<button class="btn btn-default btn-grey btn-responsive">SHARE</button>
+			</div>
+		</div>
+		<h3 class="bottom-pad">product highlights</h3>
+		<ul class="bottom-pad">
+		  <li ng-bind-html="feature" ng-repeat="feature in product.info.CatalogEntryView[0].ItemDescription[0].features"></li>
+		</ul>
+	</div>
+	<!-- End Right -->
+</div>
+<!-- End Main Row -->
+<div class="row">
+	<div class="col-md-6">
+		<product-reviews></product-reviews>
+	</div>
+	<div class="col-md-6">
+	</div>
+</div>
+<!-- End Bottom Row -->
+
+</div>
+<!-- End Container Row -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>

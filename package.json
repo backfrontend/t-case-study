@@ -1,0 +1,29 @@
+{
+  "name": "target-case-study",
+  "version": "1.0.0",
+  "description": "Case study for Target",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-qunit": "^1.2.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "http-server": "^0.9.0",
+    "protractor": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "html",
+    "angular",
+    "css",
+    "js"
+  ],
+  "author": "Graham Waite",
+  "license": "ISC"
+}

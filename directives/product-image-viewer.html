@@ -1,0 +1,13 @@
+<div ng-show="product.info.CatalogEntryView[0].Images[0].AlternateImages.length">
+<img ng-src="{{product.info.CatalogEntryView[0].Images[0].AlternateImages[imageViewer.currImage].image}}"/>
+		<div class="bottom-pad">
+			<a href=""><span class="glyphicon glyphicon-zoom-in glyphicon-medium"></span> view larger</a>
+		</div>
+			<div class="row">   
+				<div class="col-xs-3" ng-repeat="thumb in product.info.CatalogEntryView[0].Images[0].AlternateImages | limitTo : 4 track by $index">
+					<div class="thumbnail">
+						<img ng-src="{{thumb.image}}" ng-click="imageViewer.select($index)">
+					</div>
+				</div>
+			</div>
+</div>
